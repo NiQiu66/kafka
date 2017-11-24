@@ -1,6 +1,10 @@
 http://www.jianshu.com/p/64d25dcf8300
-# set CLASSPATH=,;
-# .\bin\windows\zookeeper-server-start.bat config/zookeeper.properties
-#.\bin\windows\kafka-server-start.bat config/server.properties
-# .\bin\windows\kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
-#.\bin\windows\kafka-topics.bat --list --zookeeper localhost:2181z
+set CLASSPATH=,;
+#启动zookeeper:
+.\bin\windows\zookeeper-server-start.bat config/zookeeper.properties
+#启动Kafka
+.\bin\windows\kafka-server-start.bat config/server.properties
+#创建topic
+.\bin\windows\kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
+#查看topic
+.\bin\windows\kafka-topics.bat --list --zookeeper localhost:2181z
