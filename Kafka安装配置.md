@@ -17,8 +17,4 @@ set CLASSPATH=,;
 # windows 杀进程
 wmic process where "caption = 'java.exe' and commandline like '%server-1.properties%'" get processid
 taskkill /pid 6016 /f
-
-
-
-
-CMD工具:http://blog.xinshangshangxin.com/2015/02/22/ConEmu%E8%AE%BE%E7%BD%AE%E5%BD%93%E5%89%8D%E7%9B%AE%E5%BD%95%E6%89%93%E5%BC%80/
+    
