@@ -14,6 +14,10 @@ set CLASSPATH=,;
 .\bin\windows\kafka-console-producer.bat --broker-list localhost:9092 --topic test
 # 创建消费者
 .\bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic test --from-beginning
+# 可以指定消费者组ID，实现单播和广播
+.\bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic  3rep5part --from-beginning --group 1
+# 指定分区，只消费特定分区的消息
+.\bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic  3rep5part --partition 1
 # windows 杀进程
 wmic process where "caption = 'java.exe' and commandline like '%server-1.properties%'" get processid
 taskkill /pid 6016 /f
